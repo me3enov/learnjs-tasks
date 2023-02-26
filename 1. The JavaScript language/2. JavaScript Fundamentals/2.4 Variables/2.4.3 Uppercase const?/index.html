@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.4.3 Uppercase const?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.4.3 Uppercase const?</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Examine the following code:<br><br>
+            </p>
+<pre class="code-container"><code class="code code_task">const birthday = '18.04.1982';
+const age = someCode(birthday);</code></pre>
+            <p class="section__text">
+                Here we have a constant birthday for the date, and also the age constant.<br><br>
+
+                The age is calculated from birthday using someCode(), which means a function call
+                that we didn’t explain yet (we will soon!), but the details don’t matter here,
+                the point is that age is calculated somehow based on the birthday.<br><br>
+
+                Would it be right to use upper case for birthday? For age? Or even for both?
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+<pre class="code-container"><code class="code">
+'use strict';
+
+const BIRTHDAY = '18.04.1982';
+const age = someCode(birthday);</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.4.2%20Giving%20the%20right%20name/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.5%20Data%20types/2.5.1%20String%20quotes/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

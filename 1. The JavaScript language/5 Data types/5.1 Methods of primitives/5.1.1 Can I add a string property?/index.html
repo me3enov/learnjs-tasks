@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.1.1 Can I add a string property?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.1.1 Can I add a string property?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Consider the following code:
+            </p>
+            <pre class="code-container"><code class="code_task">let str = "Hello";
+
+str.test = 5;
+
+alert(str.test);</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">let str = "Привет";
+
+str.test = 5;
+
+alert(str.test); // => undefined
+
+/*'use strict';
+
+let str = "Привет";
+
+str.test = 5; // (*)
+
+alert(str.test); // => Error */</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../../4.%20Objects%20the%20basics/4.5%20Constructor,%20operator%20%22new%22/4.5.3%20Create%20new%20Accumulator/index.html" class="footer__link">Previews Task</a>
+    <a href="../../5.2%20Numbers/5.2.1%20Sum%20numbers%20from%20the%20visitor/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

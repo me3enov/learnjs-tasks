@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.11.9 Check the login</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.11.9 Check the login</h1>
+    <p class="header__importance">importance: 3</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write the code which asks for a login with prompt.<br><br>
+
+                If the visitor enters "Admin", then prompt for a password,
+                if the input is an empty line or Esc – show “Canceled”,
+                if it’s another string – then show “I don’t know you”.<br><br>
+
+                The password is checked as follows:<br><br>
+
+                If it equals “TheMaster”, then show “Welcome!”,<br><br>
+                Another string – show “Wrong password”,<br><br>
+                For an empty string or cancelled input, show “Canceled”<br><br>
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let userName = prompt("Who's there?", '');
+
+if (userName === 'Admin') {
+
+    let pass = prompt('Password?', '');
+
+    if (pass === 'TheMaster') {
+        alert( 'Welcome!' );
+    } else if (pass === '' || pass === null) {
+        alert( 'Canceled' );
+    } else {
+        alert( 'Wrong password' );
+    }
+
+} else if (userName === '' || userName === null) {
+    alert( 'Canceled' );
+} else {
+    alert( "I don't know you" );
+}</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.11.7%20Check%20the%20range%20outside/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.13%20Loops%20while%20and%20for/2.13.1%20Last%20loop%20value/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

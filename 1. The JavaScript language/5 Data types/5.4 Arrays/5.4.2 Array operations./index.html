@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.4.2 Array operations.</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.4.2 Array operations.</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Let’s try 5 array operations.<br><br>
+
+                1. Create an array styles with items “Jazz” and “Blues”.<br>
+                2. Append “Rock-n-Roll” to the end.<br>
+                Replace the value in the middle with “Classics”.
+                4. Your code for finding the middle value should work for any arrays with odd length.<br>
+                5. Strip off the first value of the array and show it.<br>
+                6. Prepend Rap and Reggae to the array.<br>
+                7. The array in the process:<br>
+            </p>
+            <pre class="code-container"><code class="code_task">Jazz, Blues
+Jazz, Blues, Rock-n-Roll
+Jazz, Classics, Rock-n-Roll
+Classics, Rock-n-Roll
+Rap, Reggae, Classics, Rock-n-Roll</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let styles = ['Jazz', 'Blues'];
+styles.push('Rock-n-Roll');
+styles[Math.floor((styles.length - 1) / 2)] = 'Classics';
+alert( styles.shift() );
+styles.unshift('Rap', 'Reggae');</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.4.1%20Is%20array%20copied%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.4.3%20Calling%20in%20an%20array%20context/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

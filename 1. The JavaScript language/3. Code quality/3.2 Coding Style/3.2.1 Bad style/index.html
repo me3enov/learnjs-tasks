@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.2.1 Bad style</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">3.2.1 Bad style</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What’s wrong with the code style below?
+            </p>
+            <pre class="code-container"><code class="code_task">function pow(x,n)
+{
+  let result=1;
+  for(let i=0;i&LT;n;i++) {result*=x;}
+  return result;
+}
+
+let x=prompt("x?",''), n=prompt("n?",'')
+if (n<=0)
+{
+  alert(`Power ${n} is not supported, please enter an integer number greater than zero`);
+}
+else
+{
+  alert(pow(x,n))
+}</code> </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+// code style =>
+function pow(x, n) {
+  let result = 1;
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+let x = prompt("x?",'');
+let n = prompt("n?",'');
+
+if ( n <= 0 ) {
+  alert(`Степень ${n} не поддерживается,
+  введите целую степень, большую 0`);
+} else {
+  alert( pow(x, n) );
+}</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../../2.%20JavaScript%20Fundamentals/2.17%20Arrow%20functions,%20the%20basics/2.17.1%20Rewrite%20with%20arrow%20functions/index.html" class="footer__link">Previews Task</a>
+    <a href="../../3.5%20Automated%20testing%20with%20Mocha/3.5.1%20What's%20wrong%20in%20the%20test%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

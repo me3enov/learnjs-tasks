@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.6.1 A simple page</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.6.1 A simple page</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Create a web-page that asks for a name and outputs it.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const name = prompt("What is your name?", "");
+alert(name);</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.5%20Data%20types/2.5.1%20String%20quotes/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.8%20Basic%20operators,%20maths/2.8.1%20The%20postfix%20and%20prefix%20forms/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

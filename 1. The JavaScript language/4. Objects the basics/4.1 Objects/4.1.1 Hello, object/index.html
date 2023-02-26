@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.1.1 Hello, object</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">4.1.1 Hello, object</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write the code, one line for each action:
+            </p>
+            <p class="section__text">
+                1. Create an empty object user.<br>
+                2. Add the property name with the value John.<br>
+                3. Add the property surname with the value Smith.<br>
+                4. Change the value of the name to Pete.<br>
+                5. Remove the property name from the object.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const user = {};
+user.name = "John";
+user.surname = "Smith";
+user.name = "Pete";
+delete user.name;</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../../3.%20Code%20quality/3.5%20Automated%20testing%20with%20Mocha/3.5.1%20What's%20wrong%20in%20the%20test%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../4.1.2%20Check%20for%20emptiness/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

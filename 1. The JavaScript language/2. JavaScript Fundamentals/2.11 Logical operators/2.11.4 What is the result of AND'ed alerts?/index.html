@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.11.4 What is the result of AND'ed alerts?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.11.4 What is the result of AND'ed alerts?</h1>
+    <p class="header__importance">importance: 3</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What will this code show?
+            </p>
+            <pre class="code-container"><code class="code code_task">alert( alert(1) && alert(2) );</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+alert( alert(1) && alert(2) ); // => 1(number) => undefined</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.11.3%20What%20is%20the%20result%20of%20AND%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.11.5%20The%20result%20of%20OR%20AND%20OR/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

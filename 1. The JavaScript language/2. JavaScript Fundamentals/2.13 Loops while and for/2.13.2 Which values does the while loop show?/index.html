@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.13.2 Which values does the while loop show?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.13.2 Which values does the while loop show?</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                For every loop iteration, write down which value it outputs and then compare it with the solution.<br><br>
+
+                Both loops alert the same values, or not?
+            </p>
+            <p class="section__text">
+                1.<br>
+                The prefix form ++i:
+            </p>
+            <pre class="code-container"><code class="code code_task">let i = 0;
+while (++i < 5) alert( i );</code></pre>
+            <p class="section__text">
+                2.<br>
+                The postfix form i++:
+            </p>
+            <pre class="code-container"><code class="code code_task">let i = 0;
+while (i++ < 5) alert( i );</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let i = 0;
+while (++i < 5) alert( i ); // => 1; => 2;  => 3; => 4;
+
+let j = 0;
+while (j++ < 5) alert( j ); // => 1; => 2;  => 3; => 4; => 5;</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.13.1%20Last%20loop%20value/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.13.3%20Which%20values%20get%20shown%20by%20the%20%22for%22%20loop%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+
+

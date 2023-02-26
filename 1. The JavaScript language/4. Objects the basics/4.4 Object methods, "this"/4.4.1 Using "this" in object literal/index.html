@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.4.1 Using "this" in object literal</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">4.4.1 Using "this" in object literal</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Here the function makeUser returns an object.<br><br>
+
+                What is the result of accessing its ref? Why?
+            </p>
+            <pre class="code-container"><code class="code_task">function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref.name ); // What's the result?</code> </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user = makeUser();
+
+// alert( user.ref.name ); // => Error: Cannot read property 'name' of undefined
+
+// => Better
+
+function makeUser2() {
+  return {
+    name: "John",
+    ref() {
+      return this;
+    }
+  };
+}
+
+let user2 = makeUser2();
+
+alert( user2.ref().name );</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../4.1%20Objects/4.1.4%20Multiply%20numeric%20property%20values%20by%202/index.html" class="footer__link">Previews Task</a>
+    <a href="../4.4.2%20Create%20a%20calculator/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

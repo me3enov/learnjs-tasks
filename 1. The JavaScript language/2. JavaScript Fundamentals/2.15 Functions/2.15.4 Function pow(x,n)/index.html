@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.15.4 Function pow(x,n)</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.15.4 Function pow(x,n)</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function pow(x,n) that returns x in power n.
+                Or, in other words, multiplies x by itself n times and returns the result.
+            </p>
+            <pre class="code-container"><code class="code_task">pow(3, 2) = 3 * 3 = 9
+pow(3, 3) = 3 * 3 * 3 = 27
+pow(1, 100) = 1 * 1 * ...* 1 = 1</code> </pre>
+            <p class="section__text">
+                Create a web-page that prompts for x and n, and then shows the result of pow(x,n).<br><br>
+
+                P.S. In this task the function should support only natural values of n: integers up from 1.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const pow = (x, n) => {
+  let result = x;
+
+  for (let i = 1; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+const x = prompt("x?", '');
+const n = prompt("n?", '');
+
+n < 1 || typeof n !== 'number' ?
+  alert(`Power ${n} is not supported, use a positive integer`)
+  : alert( pow(x, n) );</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.15.3%20Function%20min(a,%20b)/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.17%20Arrow%20functions,%20the%20basics/2.17.1%20Rewrite%20with%20arrow%20functions/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

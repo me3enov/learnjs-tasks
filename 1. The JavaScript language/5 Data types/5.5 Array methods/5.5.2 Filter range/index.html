@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.2 Filter range</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.2 Filter range</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function filterRange(arr, a, b) that gets an array arr,
+                looks for elements with values higher or equal to a and lower
+                or equal to b and return a result as an array.<br><br>
+
+                The function should not modify the array. It should return the new array.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">let arr = [5, 3, 8, 1];
+
+let filtered = filterRange(arr, 1, 4);
+
+alert( filtered ); // 3,1 (matching values)
+
+alert( arr ); // 5,3,8,1 (not modified)</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const filterRange = (arr, a, b) => arr.filter(item => (a <= item && item <= b));
+
+const arr = [5, 3, 8, 1];
+
+const filtered = filterRange(arr, 1, 4);
+
+alert( filtered );
+
+alert( arr );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.1%20Translate%20border-left-width%20to%20borderLeftWidth/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.3%20Filter%20range%20%22in%20place%22/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.6 Create an extendable calculator</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.6 Create an extendable calculator</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Create a constructor function Calculator that
+                creates “extendable” calculator objects.<br><br>
+
+                The task consists of two parts.<br><br>
+
+                1.<br>
+                First, implement the method calculate(str) that takes
+                a string like "1 + 2" in the format “NUMBER operator NUMBER”
+                (space-delimited) and returns the result. Should understand plus + and minus -.<br><br>
+
+                Usage example:
+            </p>
+            <pre class="code-container"><code class="code_task">let calc = new Calculator;
+
+alert( calc.calculate("3 + 7") ); // 10</code></pre>
+            <p class="section__text">
+                2.<br>
+                Then add the method addMethod(name, func) that teaches
+                the calculator a new operation. It takes the operator
+                name and the two-argument function func(a,b) that implements it.<br><br>
+
+                For instance, let’s add the multiplication *, division / and power **:
+            </p>
+            <pre class="code-container"><code class="code_task">let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8</code></pre>
+            <p class="section__text">
+                No parentheses or complex expressions in this task.<br>
+                The numbers and the operator are delimited with exactly one space.<br>
+                There may be error handling if you’d like to add it.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function Calculator() {
+  this.methods = {
+    '-': (a, b) => a - b,
+    '+': (a, b) => a + b
+  };
+
+  this.calculate = function(str) {
+
+  let split = str.split(' '),
+    a = +split[0],
+    op = split[1],
+    b = +split[2];
+
+  if (!this.methods[op] || isNaN(a) || isNaN(b)) {
+    return NaN;
+  }
+
+  return this.methods[op](a, b);
+  };
+
+  this.addMethod = function(name, func) {
+    this.methods[name] = func;
+  };
+}</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.5%20Copy%20and%20sort%20array/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.7%20Map%20to%20names/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

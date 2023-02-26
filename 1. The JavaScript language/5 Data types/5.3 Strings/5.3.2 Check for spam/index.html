@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.3.2 Check for spam</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.3.2 Check for spam</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function checkSpam(str) that returns true
+                if str contains ‘viagra’ or ‘XXX’, otherwise false.<br><br>
+
+                The function must be case-insensitive:
+            </p>
+            <pre class="code-container"><code class="code_task">checkSpam('buy ViAgRA now') == true
+checkSpam('free xxxxx') == true
+checkSpam("innocent rabbit") == false</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const checkSpam = (str) => str.toLowerCase().includes('viagra') || str.toLowerCase().includes('xxx');
+
+alert( checkSpam('buy ViAgRA now') );
+alert( checkSpam('free xxxxx') );
+alert( checkSpam("innocent rabbit") );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.3.1%20Uppercase%20the%20first%20character/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.3.3%20Truncate%20the%20text/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

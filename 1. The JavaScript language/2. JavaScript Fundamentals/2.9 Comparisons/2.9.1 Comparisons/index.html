@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.9.1 Comparisons</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.9.1 Comparisons</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What will be the result for these expressions?
+            </p>
+            <pre class="code-container"><code class="code code_task">5 > 4
+"apple" > "pineapple"
+"2" > "12"
+undefined == null
+undefined === null
+null == "\n0\n"
+null === +"\n0\n"</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+5 > 4 // true
+'ананас' > '"яблоко" '// false
+'2' > '12' // true
+undefined == null // true
+undefined === null // false
+null == '\n0\n' // false
+null === +'\n0\n' // false</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.8%20Basic%20operators,%20maths/2.8.4%20Fix%20the%20addition/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.10%20Conditional%20branching%20if,%20'%3F'/2.10.1%20if%20(a%20string%20with%20zero)/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

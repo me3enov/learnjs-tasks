@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.17.1 Rewrite with arrow functions</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.17.1 Rewrite with arrow functions</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Replace Function Expressions with arrow functions in the code below:
+            </p>
+            <pre class="code-container"><code class="code_task">function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+  "Do you agree?",
+  function() { alert("You agreed."); },
+  function() { alert("You canceled the execution."); }
+);</code> </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function ask(question, yes, no) {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+    "Do you agree?",
+    () => alert("You agreed."),
+    () => alert("You canceled the execution.")
+);</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.15%20Functions/2.15.4%20Function%20pow(x,n)/index.html" class="footer__link">Previews Task</a>
+    <a href="../../../3.%20Code%20quality/3.2%20Coding%20Style/3.2.1%20Bad%20style/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

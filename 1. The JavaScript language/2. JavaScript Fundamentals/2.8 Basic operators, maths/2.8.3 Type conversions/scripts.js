@@ -1,0 +1,16 @@
+'use strict';
+
+'' + 1 + 0 // = 10 (string)
+'' - 1 + 0 // = -1 (number)
+true + false // = 1 (number)
+6 / '3' // = 2 (number)
+'2' * '3' // = 6 (number)
+4 + 5 + 'px' // = 9px (string)
+'$' + 4 + 5 // = $45 (string)
+'4' - 2 // = 2 (number)
+'4px' - 2 // = NaN (number)
+'  -9  ' + 5 // = "  -9  5" (string)
+'  -9  ' - 5 // = -14 (number)
+null + 1 // = 1 (number)
+undefined + 1 // = NaN (number)
+' \t \n' - 2 // = " \t \n" (string) \t = "  "(CHARACTER TABULATION), \n = LINE FEED

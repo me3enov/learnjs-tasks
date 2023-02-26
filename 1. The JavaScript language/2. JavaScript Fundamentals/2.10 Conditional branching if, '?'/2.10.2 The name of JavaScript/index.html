@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.10.3 Show the sign</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.10.3 Show the sign</h1>
+    <p class="header__importance">importance: 2</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Using if..else, write the code which gets a number via prompt and then shows in alert:<br><br>
+
+                1, if the value is greater than zero,<br>
+                -1, if less than zero,<br>
+                0, if equals zero.<br>
+                In this task we assume that the input is always a number.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const answer = prompt('What is the "official" name of JavaScript?', '');
+
+if (answer == 'ECMAScript') {
+  alert('Right!');
+} else {
+  alert("You don't know? ECMAScript!");
+}</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.10.1%20if%20(a%20string%20with%20zero)/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.10.3%20Show%20the%20sign/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

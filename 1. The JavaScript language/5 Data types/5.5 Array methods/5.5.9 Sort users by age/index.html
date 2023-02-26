@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.9 Sort users by age</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.9 Sort users by age</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write the function sortByAge(users) that gets an array
+                of objects with the age property and sorts them by age.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+sortByAge(arr);
+
+// now: [john, mary, pete]
+alert(arr[0].name); // John
+alert(arr[1].name); // Mary
+alert(arr[2].name); // Pete</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const sortByAge = (arr) => {
+  arr.sort((a, b) => a.age - b.age);
+}
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 28 };
+
+let arr = [ pete, john, mary ];
+
+sortByAge(arr);
+
+alert(arr[0].name); // => John
+alert(arr[1].name); // => Mary
+alert(arr[2].name); // => Pete</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.8%20Map%20to%20objects/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.10%20Shuffle%20an%20array/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

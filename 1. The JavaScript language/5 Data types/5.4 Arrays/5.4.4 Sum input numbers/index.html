@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.4.4 Sum input numbers</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.4.4 Sum input numbers</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write the function sumInput() that:<br><br>
+
+                Asks the user for values using prompt and stores the values in the array.<br>
+                Finishes asking when the user enters a non-numeric value, an empty string,
+                or presses “Cancel”.<br>
+                Calculates and returns the sum of array items.<br>
+                P.S. A zero 0 is a valid number, please don’t stop the input on zero.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function sumInput() {
+  let numbers = [];
+
+  while (true) {
+    let number = prompt("You number", 0);
+    if (number === "" || number === null || !isFinite(number)) break;
+
+    numbers.push(+number);
+  }
+
+  let sum = 0;
+  for (let number of numbers) {
+    sum += number;
+  }
+  return sum;
+}
+
+alert( sumInput() );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.4.3%20Calling%20in%20an%20array%20context/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.4.5%20A%20maximal%20subarray/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

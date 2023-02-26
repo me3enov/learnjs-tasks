@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.10.1 if (a string with zero)</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.10.1 if (a string with zero)</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Will alert be shown?
+            </p>
+            <pre class="code-container"><code class="code code_task">if ("0") {
+  alert( 'Hello' );
+}</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+if ('0') { // = true(string)
+  alert( 'Hello' );
+}</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.9%20Comparisons/2.9.1%20Comparisons/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.10.2%20The%20name%20of%20JavaScript/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

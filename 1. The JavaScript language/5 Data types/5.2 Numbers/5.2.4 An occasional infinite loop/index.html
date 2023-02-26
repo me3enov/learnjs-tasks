@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.2.4 An occasional infinite loop</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.2.4 An occasional infinite loop</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                This loop is infinite. It never ends. Why?
+            </p>
+            <pre class="code-container"><code class="code_task">let i = 0;
+while (i != 10) {
+  i += 0.2;
+}</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+/*let i = 0;
+while (i != 10) {
+    i += 0.2;
+} => infinite loop js */</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.2.3%20Repeat%20until%20the%20input%20is%20a%20number/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.2.5%20A%20random%20number%20from%20min%20to%20max/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

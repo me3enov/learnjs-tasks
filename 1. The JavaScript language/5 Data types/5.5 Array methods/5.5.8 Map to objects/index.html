@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.8 Map to objects</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.8 Map to objects</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                You have an array of user objects, each one has name, surname and id.<br><br>
+
+                Write the code to create another array from it,
+                of objects with id and fullName, where fullName is generated from name and surname.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">let john = { name: "John", surname: "Smith", id: 1 };
+let pete = { name: "Pete", surname: "Hunt", id: 2 };
+let mary = { name: "Mary", surname: "Key", id: 3 };
+
+let users = [ john, pete, mary ];
+
+let usersMapped = /* ... your code ... */
+
+/*
+usersMapped = [
+  { fullName: "John Smith", id: 1 },
+  { fullName: "Pete Hunt", id: 2 },
+  { fullName: "Mary Key", id: 3 }
+]
+*/
+
+alert( usersMapped[0].id ) // 1
+alert( usersMapped[0].fullName ) // John Smith</code></pre>
+            <p class="section__text">
+                So, actually you need to map one array of objects to another. Try using => here. There’s a small catch.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const john = { name: "John", surname: "Smith", id: 1 };
+const pete = { name: "Pete", surname: "Hunt", id: 2 };
+const mary = { name: "Mary", surname: "Key", id: 3 };
+
+const users = [ john, pete, mary ];
+
+const usersMapped = users.map(user => ({
+    fullName: `${user.name} ${user.surname}`,
+    id: user.id
+}));
+
+alert( usersMapped[0].id ); // 1
+alert( usersMapped[0].fullName ); // John Smith</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.7%20Map%20to%20names/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.9%20Sort%20users%20by%20age/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

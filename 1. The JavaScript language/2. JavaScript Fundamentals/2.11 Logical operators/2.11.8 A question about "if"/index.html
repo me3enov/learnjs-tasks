@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.11.8 A question about "if"</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.11.8 A question about "if"</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Which of these alerts are going to execute?<br><br>
+
+                What will the results of the expressions be inside if(...)?
+            </p>
+            <pre class="code-container"><code class="code code_task">if (-1 || 0) alert( 'first' );
+if (-1 && 0) alert( 'second' );
+if (null || -1 && 1) alert( 'third' );</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+if (-1 || 0) alert( 'first' ); // (-1 || 0) => -1 = if (true)
+if (-1 && 0) alert( 'second' ); // (-1 && 0) => 0 = if (false)
+if (null || -1 && 1) alert( 'third' ); // (null || -1 && 1) => 1 = if (true)</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.11.7%20Check%20the%20range%20outside/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.11.9%20Check%20the%20login/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.2.3 Repeat until the input is a number</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.2.3 Repeat until the input is a number</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Create a function readNumber which prompts for a number
+                until the visitor enters a valid numeric value.<br><br>
+
+                The resulting value must be returned as a number.<br><br>
+
+                The visitor can also stop the process by entering an empty line or pressing “CANCEL”.
+                In that case, the function should return null.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function readNumber() {
+  let num;
+
+  do {
+    num = prompt("Enter a number please?", 0);
+  } while ( !isFinite(num) );
+
+  if (num === null || num === '') return null;
+
+  return +num;
+}
+
+alert(`Read: ${readNumber()}`);</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.2.2%20Why%206.35.toFixed(1)%20==%206.3%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.2.4%20An%20occasional%20infinite%20loop/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

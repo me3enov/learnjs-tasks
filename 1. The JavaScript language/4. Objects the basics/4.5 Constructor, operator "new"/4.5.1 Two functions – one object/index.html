@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.5.1 Two functions – one object</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">4.5.1 Two functions – one object</h1>
+    <p class="header__importance">importance: 2</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Is it possible to create functions A and B so that new A() == new B()?
+            </p>
+            <pre class="code-container"><code class="code_task">function A() { ... }
+function B() { ... }
+
+let a = new A();
+let b = new B();
+
+alert( a == b ); // true</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const obj = {};
+
+function A() { return obj; }
+function B() { return obj; }
+
+alert( new A() == new B() ); // true</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../4.4%20Object%20methods,%20%22this%22/4.4.3%20Chaining/index.html" class="footer__link">Previews Task</a>
+    <a href="../4.5.2%20Create%20new%20Calculator/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.4 Sort in decreasing order</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.4 Sort in decreasing order</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                let arr = [5, 2, 1, -10, 8];
+
+                // ... your code to sort it in decreasing order
+
+                alert( arr ); // 8, 5, 2, 1, -10
+            </p>
+            <pre class="code-container"><code class="code_task">let arr = [5, 3, 8, 1];
+
+filterRangeInPlace(arr, 1, 4); // removed the numbers except from 1 to 4
+
+alert( arr ); // [3, 1]</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const arr = [5, 2, 1, -10, 8];
+
+arr.sort((a, b) => b - a);
+
+alert( arr );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.3%20Filter%20range%20%22in%20place%22/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.5%20Copy%20and%20sort%20array/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

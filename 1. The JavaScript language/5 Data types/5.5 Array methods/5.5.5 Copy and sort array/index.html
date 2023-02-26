@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.5.5 Copy and sort array</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.5.5 Copy and sort array</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We have an array of strings arr. We’d like to have
+                a sorted copy of it, but keep arr unmodified.<br><br>
+
+                Create a function copySorted(arr) that returns such a copy.
+            </p>
+            <pre class="code-container"><code class="code_task">let arr = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr);
+
+alert( sorted ); // CSS, HTML, JavaScript
+alert( arr ); // HTML, JavaScript, CSS (no changes)</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const copySorted = (arr) => arr.slice().sort();
+
+const arr = ["HTML", "JavaScript", "CSS"];
+
+const sorted = copySorted(arr);
+
+alert( sorted );
+alert( arr );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.5.4%20Sort%20in%20decreasing%20order/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.5.6%20Create%20an%20extendable%20calculator/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

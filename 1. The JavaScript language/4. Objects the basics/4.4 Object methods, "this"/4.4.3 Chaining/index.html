@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.4.3 Chaining</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">4.4.3 Chaining</h1>
+    <p class="header__importance">importance: 1</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                There’s a ladder object that allows to go up and down:
+            </p>
+            <pre class="code-container"><code class="code_task">let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+  }
+};</code></pre>
+            <p class="section__text">
+                Now, if we need to make several calls in sequence, can do it like this:
+            </p>
+            <pre class="code-container"><code class="code_task">ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep(); // 1
+ladder.down();
+ladder.showStep(); // 0</code></pre>
+            <p class="section__text">
+                Modify the code of up, down and showStep to make the calls chainable, like this:
+            </p>
+            <pre class="code-container"><code class="code_task">ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0</code></pre>
+            <p class="section__text">
+                Such approach is widely used across JavaScript libraries.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep() {
+    alert( this.step );
+    return this;
+  }
+};
+
+ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../4.4.1%20Using%20%22this%22%20in%20object%20literal/index.html" class="footer__link">Previews Task</a>
+    <a href="../../4.5%20Constructor,%20operator%20%22new%22/4.5.1%20Two%20functions%20–%20one%20object/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

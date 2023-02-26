@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.11.3 What is the result of AND?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.11.3 What is the result of AND?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What is this code going to show?
+            </p>
+            <pre class="code-container"><code class="code code_task">alert( 1 && null && 2 );</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+alert(1 && null && 2); // => null(object)</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.11.2%20What's%20the%20result%20of%20OR'ed%20alerts%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.11.4%20What%20is%20the%20result%20of%20AND'ed%20alerts%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

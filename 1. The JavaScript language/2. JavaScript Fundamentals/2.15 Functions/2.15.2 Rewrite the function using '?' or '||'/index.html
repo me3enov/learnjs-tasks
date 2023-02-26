@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.15.2 Rewrite the function using '?' or '||'</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.15.2 Rewrite the function using '?' or '||'</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                The following function returns true if the parameter age is greater than 18.<br><br>
+
+                Otherwise it asks for a confirmation and returns its result.
+            </p>
+            <pre class="code-container"><code class="code_task">function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}</code> </pre>
+            <p class="section__text">
+                Rewrite it, to perform the same, but without if, in a single line.<br><br>
+
+                Make two variants of checkAge:<br><br>
+
+                1. Using a question mark operator ?<br>
+                2. Using OR ||
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const checkAge = (age) => (age > 18) ? true : confirm('Did parents allow you?');
+
+const checkAge = (age) => (age > 18) || confirm('Did parents allow you?');</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.15.1%20Is%20%22else%22%20required%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.15.3%20Function%20min(a,%20b)/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+
+
+

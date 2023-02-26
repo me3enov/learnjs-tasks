@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.4.5 A maximal subarray</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.4.5 A maximal subarray</h1>
+    <p class="header__importance">importance: 2</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                The input is an array of numbers, e.g. arr = [1, -2, 3, 4, -9, 6].<><br><br>
+
+                The task is: find the contiguous subarray of arr with the maximal sum of items.<br><br>
+
+                Write the function getMaxSubSum(arr) that will return that sum.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">getMaxSubSum([-1, 2, 3, -9]) == 5 (the sum of highlighted items)
+getMaxSubSum([2, -1, 2, 3, -9]) == 6
+getMaxSubSum([-1, 2, 3, -9, 11]) == 11
+getMaxSubSum([-2, -1, 1, 2]) == 3
+getMaxSubSum([100, -9, 2, -3, 5]) == 100
+getMaxSubSum([1, 2, 3]) == 6 (take all)</code></pre>
+            <p class="section__text">
+                If all items are negative, it means that we take none (the subarray is empty), so the sum is zero:
+            </p>
+            <pre class="code-container"><code class="code_task">getMaxSubSum([-1, -2, -3]) = 0</code></pre>
+            <p class="section__text">
+                Please try to think of a fast solution: O(n2) or even O(n) if you can.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const getMaxSubSum = (arr) => {
+  let maxSum = 0;
+  let partialSum = 0;
+
+  for (let item of arr) {
+    partialSum += item;
+    maxSum = Math.max(maxSum, partialSum);
+    if (partialSum < 0) partialSum = 0;
+  }
+
+  return maxSum;
+}
+
+alert( getMaxSubSum([-1, 2, 3, -9]) ); // => 5
+alert( getMaxSubSum([-1, 2, 3, -9, 11]) ); // => 11
+alert( getMaxSubSum([-2, -1, 1, 2]) ); // => 3
+alert( getMaxSubSum([100, -9, 2, -3, 5]) ); // => 100
+alert( getMaxSubSum([1, 2, 3]) ); // => 6
+alert( getMaxSubSum([-1, -2, -3]) ); // => 0</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.4.4%20Sum%20input%20numbers/index.html" class="footer__link">Previews Task</a>
+    <a href="../../5.5%20Array%20methods/5.5.1%20Translate%20border-left-width%20to%20borderLeftWidth/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

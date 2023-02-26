@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.13.1 Last loop value</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.13.1 Last loop value</h1>
+    <p class="header__importance">importance: 3</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What is the last value alerted by this code? Why?
+            </p>
+            <pre class="code-container"><code class="code code_task">let i = 3;
+
+while (i) {
+  alert( i-- );
+}</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let i = 3;
+
+while (i) { // i = 3; i = 2; i = 1; i = 0 => i = false
+  alert( i-- ); // => 3'; => 2;  => 1;
+}</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.11%20Logical%20operators/2.11.9%20Check%20the%20login/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.13.2%20Which%20values%20does%20the%20while%20loop%20show%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

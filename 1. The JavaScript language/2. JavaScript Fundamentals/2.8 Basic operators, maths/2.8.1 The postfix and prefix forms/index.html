@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.8.1 The postfix and prefix forms</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.8.1 The postfix and prefix forms</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What are the final values of all variables a, b, c and d after the code below?
+            </p>
+            <pre class="code-container"><code class="code code_task">let a = 1, b = 1;
+
+let c = ++a; // ?
+let d = b++; // ?</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let a = 1, b = 1;
+
+let c = ++a; // c = 2
+let d = b++; // d = 1</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.6%20Interaction%20alert,%20prompt,%20confirm/2.6.1%20A%20simple%20page/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.8.2%20Assignment%20result/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

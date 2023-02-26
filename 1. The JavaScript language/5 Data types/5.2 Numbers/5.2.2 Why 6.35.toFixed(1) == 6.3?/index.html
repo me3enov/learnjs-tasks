@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.2.2 Why 6.35.toFixed(1) == 6.3?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.2.2 Why 6.35.toFixed(1) == 6.3?</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                According to the documentation Math.round and toFixed both round
+                to the nearest number: 0..4 lead down while 5..9 lead up.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">alert( 1.35.toFixed(1) ); // 1.4</code></pre>
+            <p class="section__text">
+                In the similar example below, why is 6.35 rounded to 6.3, not 6.4?
+            </p>
+            <pre class="code-container"><code class="code_task">alert( 6.35.toFixed(1) ); // 6.3</code></pre>
+            <p class="section__text">
+                How to round 6.35 the right way?
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+alert( Math.round(6.35 * 10) / 10 );</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.2.1%20Sum%20numbers%20from%20the%20visitor/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.2.3%20Repeat%20until%20the%20input%20is%20a%20number/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

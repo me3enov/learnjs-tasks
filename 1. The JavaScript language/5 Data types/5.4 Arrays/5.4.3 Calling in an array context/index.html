@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.4.3 Calling in an array context</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.4.3 Calling in an array context</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What is the result? Why?
+            </p>
+            <pre class="code-container"><code class="code_task">let arr = ["a", "b"];
+
+arr.push(function() {
+  alert( this );
+});
+
+arr[2](); // ?</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const arr = ["a", "b"];
+
+arr.push(function() {
+  alert( this );
+})
+
+arr[2](); // function() {alert( this )}</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.4.2%20Array%20operations./index.html" class="footer__link">Previews Task</a>
+    <a href="../5.4.4%20Sum%20input%20numbers/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

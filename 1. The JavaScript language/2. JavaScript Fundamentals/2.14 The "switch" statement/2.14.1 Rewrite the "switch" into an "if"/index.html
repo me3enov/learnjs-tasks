@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.14.1 Rewrite the "switch" into an "if"</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.14.1 Rewrite the "switch" into an "if"</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write the code using if..else which would correspond to the following switch:
+            </p>
+            <pre class="code-container"><code class="code_task">switch (browser) {
+  case 'Edge':
+    alert( "You've got the Edge!" );
+    break;
+
+  case 'Chrome':
+  case 'Firefox':
+  case 'Safari':
+  case 'Opera':
+    alert( 'Okay we support these browsers too' );
+    break;
+
+  default:
+    alert( 'We hope that this page looks ok!' );
+}</code> </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+if(browser == 'Edge') {
+  alert("You've got the Edge!");
+} else if (browser == 'Chrome'
+    || browser == 'Firefox'
+    || browser == 'Safari'
+    || browser == 'Opera') {
+  alert( 'Okay we support these browsers too' );
+} else {
+  alert( 'We hope that this page looks ok!' );
+}</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../2.13%20Loops%20while%20and%20for/2.13.7%20Output%20prime%20numbers/index.html" class="footer__link">Previews Task</a>
+    <a href="../2.14.2%20Rewrite%20%22if%22%20into%20%22switch%22/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+
+
+

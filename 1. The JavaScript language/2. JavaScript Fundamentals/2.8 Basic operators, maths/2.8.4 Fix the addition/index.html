@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.8.4 Fix the addition</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">2.8.4 Fix the addition</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Here’s a code that asks the user for two numbers and shows their sum.<br><br>
+
+                It works incorrectly. The output in the example below is 12 (for default prompt values).<br><br>
+
+                Why? Fix it. The result should be 3.
+            </p>
+            <pre class="code-container"><code class="code code_task">let a = prompt("First number?", 1);
+let b = prompt("Second number?", 2);
+
+alert(a + b); // 12</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const a = prompt("First number?", 1);
+const b = prompt("Second number?", 2);
+
+alert(+a + +b); // alert massage = '3' (number)</code> </pre>
+
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../2.8.3%20Type%20conversions/index.html" class="footer__link">Previews Task</a>
+    <a href="../../2.9%20Comparisons/2.9.1%20Comparisons/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.5.1 What's wrong in the test?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">3.5.1 What's wrong in the test?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What’s wrong in the test of pow below?
+            </p>
+            <pre class="code-container"><code class="code_task">it("Raises x to the power n", function() {
+  let x = 5;
+
+  let result = x;
+  assert.equal(pow(x, 1), result);
+
+  result *= x;
+  assert.equal(pow(x, 2), result);
+
+  result *= x;
+  assert.equal(pow(x, 3), result);
+});</code> </pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+// better =>
+describe("Raises x to power n", function() {
+  it("5 in the power of 1 equals 5", function() {
+    assert.equal(pow(5, 1), 5);
+  });
+
+  // Mocha will run only this block
+  it.only("5 in the power of 2 equals 25", function() {
+    assert.equal(pow(5, 2), 25);
+  });
+
+  it("5 in the power of 3 equals 125", function() {
+    assert.equal(pow(5, 3), 125);
+  });
+});</code> </pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../3.2%20Coding%20Style/3.2.1%20Bad%20style/index.html" class="footer__link">Previews Task</a>
+    <a href="../../../4.%20Objects%20the%20basics/4.1%20Objects/4.1.2%20Check%20for%20emptiness/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
