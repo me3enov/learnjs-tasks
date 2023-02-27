@@ -12,7 +12,7 @@
 #### [2.10 Conditional branching if, '?'](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.10%20Conditional%20branching%20if,%20'?')
 #### [2.11 Logical operators](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators)
 #### [2.13 Loops while and for](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.13%20Loops%20while%20and%20for)
-#### [2.14 The "switch" statement](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.14%20The%20&QUOTswitch&QUOT%20statement)
+#### [2.14 The "switch" statement](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.14%20The%20\0022switch\0022%20statement)
 #### [2.15 Functions](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.15%20Functions)
 #### [2.17 Arrow functions, the basics](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.17%20Arrow%20functions,%20the%20basics)
 
