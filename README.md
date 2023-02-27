@@ -1,11 +1,11 @@
 # learnjs-tasks
 
-## [1. The JavaScript language](./1.%20The%20JavaScript%20language)
+> ## [1. The JavaScript language](./1.%20The%20JavaScript%20language)
 
-### [2. JavaScript Fundamentals](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals)
-#### [2.1 Hello, world!](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!)
-#### [2.1.1 Show an alert](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.1%20Show%20an%20alert)
-#### [2.1.2 Show an alert with an external script](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.2%20Show%20an%20alert%20with%20an%20external%20script)
+>> ### [2. JavaScript Fundamentals](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals)
+>>> #### [2.1 Hello, world!](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!)
+>>> #### [2.1.1 Show an alert](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.1%20Show%20an%20alert)
+>>> #### [2.1.2 Show an alert with an external script](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.2%20Show%20an%20alert%20with%20an%20external%20script)
 
 #### [2.4 Variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables)
 ##### [2.4.1 Working with variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.1%20Working%20with%20variables)
@@ -37,7 +37,7 @@
 #### [2.11 Logical operators](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators)
 ##### [2.11.1 What's the result of OR?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.1%20What's%20the%20result%20of%20OR%3F)
 ##### [2.11.2 What's the result of OR'ed alerts?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.2%20What's%20the%20result%20of%20OR'ed%20alerts%3F)
-##### [2.11.3 What is the result of AND?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.3 What is the result of AND?)
+##### [2.11.3 What is the result of AND?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.3%20What%20is%20the%20result%20of%20AND%3F)
 ##### [2.11.4 What is the result of AND'ed alerts?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.3%20What%20is%20the%20result%20of%20AND%3F)
 ##### [2.11.5 The result of OR AND OR](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.5%20The%20result%20of%20OR%20AND%20OR)
 ##### [2.11.6 Check the range between](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.11%20Logical%20operators/2.11.6%20Check%20the%20range%20between)
