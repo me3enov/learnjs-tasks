@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.10.1 Destructuring assignment</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.10.1 Destructuring assignment</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We have an object:
+            </p>
+            <pre class="code-container"><code class="code_task">let user = {
+  name: "John",
+  years: 30
+};</code></pre>
+            <p class="section__text">
+                Write the destructuring assignment that reads:<br><br>
+
+                name property into the variable name.<br>
+                years property into the variable age.<br>
+                isAdmin property into the variable isAdmin (false, if no such property)<br>
+                Here’s an example of the values after your assignment:
+            </p>
+            <pre class="code-container"><code class="code_task">let user = { name: "John", years: 30 };
+
+// your code to the left side:
+// ... = user
+
+alert( name ); // John
+alert( age ); // 30
+alert( isAdmin ); // false</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const user = {
+  name: "John",
+  years: 30
+};
+
+const {name, years: age, isAdmin = false} = user;
+
+alert( name ); // John
+alert( age ); // 30
+alert( isAdmin ); // false</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../5.9%20Object.keys,%20values,%20entries/5.9.2%20Count%20properties/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.10.2%20The%20maximal%20salary/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

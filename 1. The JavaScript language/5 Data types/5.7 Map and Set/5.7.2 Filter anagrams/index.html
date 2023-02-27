@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.7.2 Filter anagrams</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.7.2 Filter anagrams</h1>
+    <p class="header__importance">importance: 3</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Anagrams are words that have the same number of same letters, but in different order.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">nap - pan
+ear - are - era
+cheaters - hectares - teachers</code></pre>
+            <p class="section__text">
+                Write a function aclean(arr) that returns an array cleaned from anagrams.<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert( aclean(arr) ); // "nap,teachers,ear" or "PAN,cheaters,era"</code></pre>
+            <p class="section__text">
+                From every anagram group should remain only one word, no matter which one.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function aclean(arr) {
+  const obj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    const sorted = arr[i].toLowerCase().split("").sort().join("");
+    obj[sorted] = arr[i];
+  }
+
+  return Object.values(obj);
+}
+
+const arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+alert( aclean(arr) );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.7.1%20Filter%20unique%20array%20members/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.7.3%20Iterable%20keys/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

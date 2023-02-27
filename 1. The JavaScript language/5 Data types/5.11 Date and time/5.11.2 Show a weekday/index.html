@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>5.11.2 Show a weekday</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+  <header class="header">
+    <h1 class="header__title">5.11.2 Show a weekday</h1>
+    <p class="header__importance">importance: 5</p>
+  </header>
+
+  <main class="main">
+    <section class="section">
+      <div class="task">
+        <h2 class="section__title">Tasks:</h2>
+        <p class="section__text">
+          Write a function getWeekDay(date) to show the weekday in short format:
+          ‘MO’, ‘TU’, ‘WE’, ‘TH’, ‘FR’, ‘SA’, ‘SU’.<br><br>
+
+          For instance:
+        </p>
+        <pre class="code-container"><code class="code_task">let date = new Date(2012, 0, 3);  // 3 Jan 2012
+alert( getWeekDay(date) );        // should output "TU"</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="answer">
+        <h2 class="section__title">Answer:</h2>
+        <p class="section__text">Inside
+          <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+        <pre class="code-container"><code class="code">'use strict';
+
+function getWeekDay(date) {
+  const days = ['SU', 'MO', 'TU', 'WE', 'TH', 'FR', 'SA'];
+
+  return days[date.getDay()];
+}
+
+let date = new Date(2014, 0, 3); // => 3 Jan 2014
+alert( getWeekDay(date) ); // => FR</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="../5.11.1%20Create%20a%20date/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.11.3%20European%20weekday/index.html" class="footer__link">Next Task</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.7.3 Iterable keys</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.7.3 Iterable keys</h1>
+    <p class="header__importance">importance: 3</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We’d like to get an array of map.keys() in a variable
+                and then apply array-specific methods to it, e.g. .push.<br><br>
+
+                But that doesn’t work:
+            </p>
+            <pre class="code-container"><code class="code_task">let map = new Map();
+
+map.set("name", "John");
+
+let keys = map.keys();
+
+// Error: keys.push is not a function
+keys.push("more");</code></pre>
+            <p class="section__text">
+                Why? How can we fix the code to make keys.push work?
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let map = new Map();
+
+map.set("name", "John");
+
+let keys = Array.from(map.keys());
+
+keys.push("more");
+
+alert(keys); // => name, more</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.7.2%20Filter%20anagrams/index.html" class="footer__link">Previews Task</a>
+    <a href="../../5.8%20WeakMap%20и%20WeakSet/5.8.1%20Store%20%22unread%22%20flags/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

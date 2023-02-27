@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.11.8 Format the relative date</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.11.8 Format the relative date</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function formatDate(date) that should format date as follows:<br><br>
+
+                If since date passed less than 1 second, then "right now".<br>
+                Otherwise, if since date passed less than 1 minute, then "n sec. ago".<br>
+                Otherwise, if less than an hour, then "m min. ago".<br>
+                Otherwise, the full date in the format "DD.MM.YY HH:mm".
+                That is: "day.month.year hours:minutes", all in 2-digit format, e.g. 31.12.16 10:00.<br>
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">alert( formatDate(new Date(new Date - 1)) ); // "right now"
+
+alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+
+alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+
+// yesterday's date like 31.12.16 20:00
+alert( formatDate(new Date(new Date - 86400 * 1000)) );</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function formatDate(date) {
+  let diff = new Date() - date;
+  if (diff < 1000) return 'right now';
+  let sec = Math.floor(diff / 1000);
+  if (sec < 60) return sec + ' sec. ago';
+  let min = Math.floor(diff / 60000);
+  if (min < 60) return min + ' min. ago';
+
+  let d = date;
+  d = [
+    '0' + d.getDate(),
+    '0' + (d.getMonth() + 1),
+    '' + d.getFullYear(),
+    '0' + d.getHours(),
+    '0' + d.getMinutes()
+  ].map(component => component.slice(-2));
+
+  return d.slice(0, 3).join('.') + ' ' + d.slice(3).join(':');
+}
+
+alert( formatDate(new Date(new Date - 1)) ); // "right now"
+alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 sec. ago"
+alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 min. ago"
+// yesterday's date like 31.12.2016 20:00
+alert( formatDate(new Date(new Date - 86400 * 1000)) );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.11.7%20How%20many%20seconds%20till%20tomorrow%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../../5.12%20JSON%20methods,%20toJSON/5.12.1%20Turn%20the%20object%20into%20JSON%20and%20back/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

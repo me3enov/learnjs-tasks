@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.9.2 Count properties</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.9.2 Count properties</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function count(obj) that returns the number of properties in the object:
+            </p>
+            <pre class="code-container"><code class="code_task">let user = {
+  name: 'John',
+  age: 30
+};
+
+alert( count(user) ); // 2</code></pre>
+            <p class="section__text">
+                Try to make the code as short as possible.<br><br>
+
+                P.S. Ignore symbolic properties, count only “regular” ones.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const count = (obj) => Object.keys(obj).length;</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.9.1%20Sum%20the%20properties/index.html" class="footer__link">Previews Task</a>
+    <a href="../../5.10%20Destructuring%20assignment/5.10.1%20Destructuring%20assignment/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

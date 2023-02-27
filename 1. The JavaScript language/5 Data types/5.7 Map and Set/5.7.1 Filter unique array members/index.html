@@ -16,16 +16,26 @@
         <div class="task">
             <h2 class="section__title">Tasks:</h2>
             <p class="section__text">
-                What is this code going to show?
+                Let arr be an array.<br><br>
+
+                Create a function unique(arr) that should return an array with unique items of arr.<br><br>
+
+                For instance:
             </p>
-            <pre class="code-container"><code class="code_task">let fruits = ["Apples", "Pear", "Orange"];
+            <pre class="code-container"><code class="code_task">function unique(arr) {
+  /* your code */
+}
 
-// push a new value into the "copy"
-let shoppingCart = fruits;
-shoppingCart.push("Banana");
+let values = ["Hare", "Krishna", "Hare", "Krishna",
+  "Krishna", "Krishna", "Hare", "Hare", ":-O"
+];
 
-// what's in fruits?
-alert( fruits.length ); // ?</code></pre>
+alert( unique(values) ); // Hare, Krishna, :-O</code></pre>
+            <p class="section__text">
+                P.S. Here strings are used, but can be values of any type.<br><br>
+
+                P.P.S. Use Set to store unique values.
+            </p>
         </div>
     </section>
     <section class="section">
@@ -35,19 +45,13 @@ alert( fruits.length ); // ?</code></pre>
                 <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
             <pre class="code-container"><code class="code">'use strict';
 
-let fruits = ["Apples", "Pear", "Orange"];
-
-let shoppingCart = fruits;
-
-shoppingCart.push("Banana");
-
-alert( fruits.length ); // => 4</code></pre>
+const unique = (arr) => Array.from(new Set(arr));</code></pre>
         </div>
     </section>
 </main>
 <footer class="footer">
-    <a href="../../5.3%20Strings/5.3.4%20Extract%20the%20money/index.html" class="footer__link">Previews Task</a>
-    <a href="../5.4.2%20Array%20operations./index.html" class="footer__link">Next Task</a>
+    <a href="../../5.5%20Array%20methods/5.5.13%20Create%20keyed%20object%20from%20array/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.7.2%20Filter%20anagrams/index.html" class="footer__link">Next Task</a>
 </footer>
 </body>
 </html>

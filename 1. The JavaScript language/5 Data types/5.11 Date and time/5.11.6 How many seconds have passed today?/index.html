@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.11.6 How many seconds have passed today?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.11.6 How many seconds have passed today?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function getSecondsToday() that returns the number
+                of seconds from the beginning of today.<br><br>
+
+                For instance, if now were 10:00 am, and there was no daylight savings shift, then:
+            </p>
+            <pre class="code-container"><code class="code_task">getSecondsToday() == 36000 // (3600 * 10)</code></pre>
+            <p class="section__text">
+                The function should work in any day. That is, it should not have a hard-coded value of “today”.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function getSecondsToday() {
+  let date = new Date();
+  return date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
+}
+
+alert( getSecondsToday() );</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.11.5%20Last%20day%20of%20month%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.11.7%20How%20many%20seconds%20till%20tomorrow%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

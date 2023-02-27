@@ -1,0 +1,84 @@
+/* STYLE FOR ALL PAGE*/
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Roboto', Sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-font-feature-settings: 'kern';
+    font-feature-settings: 'kern';
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    background-color: #232529;
+    color: white;
+}
+
+.header {
+    padding: 40px;
+}
+
+.header__title {
+    margin-bottom: 10px;
+}
+
+.section {
+    padding: 40px 40px 0 40px;
+}
+
+.importance {
+    color: #999;
+}
+
+.section__title{
+    max-width: 800px;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.section__text{
+    max-width: 800px;
+    padding: 20px 0;
+}
+
+.section__link{
+    text-decoration: none;
+    color: #696e79;
+    border-bottom: 1px dashed #696e79;
+    padding: 0 6px 0 6px;
+}
+
+.code{
+    color: #448460
+}
+
+.code_task{
+    color: #ff79c6
+}
+
+.footer {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 20px));
+    gap: 40px
+}
+
+.footer__link {
+    padding: 20px 0;
+    text-decoration: none;
+    text-align: center;
+    background-color: #41454c;
+    background-color: #292c31;
+    color: white;
+}
+
+.footer__link:hover,
+.footer__link:focus{
+    background-color: #41454c;
+}

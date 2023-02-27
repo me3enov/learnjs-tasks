@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.11.5 Last day of month?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">5.11.5 Last day of month?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write a function getLastDayOfMonth(year, month) that returns the last day of month.
+                Sometimes it is 30th, 31st or even 28/29th for Feb.<br><br>
+
+                Parameters:<br><br>
+
+                year – four-digits year, for instance 2012.<br>
+                month – month, from 0 to 11.<br>
+                For instance, getLastDayOfMonth(2012, 1) = 29 (leap year, Feb).
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function getLastDayOfMonth(year, month) {
+  let date = new Date(year, month + 1, 0);
+  return date.getDate();
+}
+
+alert( getLastDayOfMonth(2012, 0) ); // => 31
+alert( getLastDayOfMonth(2012, 1) ); // => 29
+alert( getLastDayOfMonth(2013, 1) ); // => 28</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../5.11.4%20Which%20day%20of%20month%20was%20many%20days%20ago%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../5.11.6%20How%20many%20seconds%20have%20passed%20today%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
