@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.6 Function in if</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.6 Function in if</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Look at the code. What will be the result of the call at the last line?
+            </p>
+            <pre class="code-container"><code class="code_task">let phrase = "Hello";
+
+if (true) {
+  let user = "John";
+
+  function sayHi() {
+    alert(`${phrase}, ${user}`);
+  }
+}
+
+sayHi();</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let phrase = "Hello";
+
+if (true) {
+  let user = "John";
+
+  function sayHi() {
+    alert(`${phrase}, ${user}`);
+  }
+}
+
+sayHi(); // => Uncaught ReferenceError: sayHi is not defined</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.5%20Counter%20object/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.7%20Sum%20with%20closures/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

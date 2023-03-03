@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.8 Is variable visible?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.8 Is variable visible?</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                What will be the result of this code?
+            </p>
+            <pre class="code-container"><code class="code_task">let x = 1;
+
+function func() {
+  console.log(x); // ?
+
+  let x = 2;
+}
+
+func();</code></pre>
+            <p class="section__text">
+                P.S. There’s a pitfall in this task. The solution is not obvious.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let x = 1;
+
+function func() {
+  console.log(x); // => ReferenceError: Cannot access 'x' before initialization
+  let x = 2;
+}
+
+func();</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.7%20Sum%20with%20closures/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.9%20Filter%20through%20function/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.7 Sum with closures</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.7 Sum with closures</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write function sum that works like this: sum(a)(b) = a+b.<br><br>
+
+                Yes, exactly this way, using double parentheses (not a mistype).<br><br>
+
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">sum(1)(2) = 3
+sum(5)(-1) = 4</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const sum = (a) => (b) => a + b
+
+alert( sum(1)(2) ); // => 3
+alert( sum(5)(-1) ); // => 4</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.6%20Function%20in%20if/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.8%20Is%20variable%20visible%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

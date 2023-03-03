@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.6.2 Sum with an arbitrary amount of brackets</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.6.2 Sum with an arbitrary amount of brackets</h1>
+    <p class="header__importance">importance: 2</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Write function sum that would work like this:
+            </p>
+            <pre class="code-container"><code class="code_task">sum(1)(2) == 3; // 1 + 2
+sum(1)(2)(3) == 6; // 1 + 2 + 3
+sum(5)(-1)(2) == 6
+sum(6)(-1)(-2)(-3) == 0
+sum(0)(1)(2)(3)(4)(5) == 15</code></pre>
+            <p class="section__text">
+                P.S. Hint: you may need to setup custom object to primitive conversion for your function.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function sum(a) {
+  let currentSum = a;
+
+  function f(b) {
+    currentSum += b;
+    return f;
+  }
+
+  f.toString = function() {
+    return currentSum;
+  };
+
+  return f;
+}
+
+alert( sum(1)(2) ); // 3
+alert( sum(5)(-1)(2) ); // 6
+alert( sum(6)(-1)(-2)(-3) ); // 0
+alert( sum(0)(1)(2)(3)(4)(5) ); // 15</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.6.1%20Set%20and%20decrease%20for%20counter/index.html" class="footer__link">Previews Task</a>
+    <a href="../../6.8%20Scheduling%20setTimeout%20and%20setInterval/6.8.1%20Output%20every%20second/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.9.1 Spy decorator</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">6.9.1 Spy decorator</h1>
+    <p class="header__importance">importance: 5</p>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="task">
+        <h2 class="section__title">Tasks:</h2>
+        <p class="section__text">
+            Create a decorator spy(func) that should return a wrapper that
+            saves all calls to function in its calls property.<br><br>
+
+            Every call is saved as an array of arguments.<br><br>
+
+            For instance:
+        </p>
+        <pre class="code-container"><code class="code_task">function work(a, b) {
+  alert( a + b ); // work is an arbitrary function or method
+}
+
+work = spy(work);
+
+work(1, 2); // 3
+work(4, 5); // 9
+
+for (let args of work.calls) {
+  alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
+}</code></pre>
+        <p class="section__text">
+          P.S. That decorator is sometimes useful for unit-testing.<br>
+          Its advanced form is sinon.spy in Sinon.JS library.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="answer">
+        <h2 class="section__title">Answer:</h2>
+        <p class="section__text">Inside
+          <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+          <pre class="code-container"><code class="code">function spy(func) {
+
+  function wrapper(...args) {
+    wrapper.calls.push(args);
+    return func.apply(this, args);
+  }
+
+  wrapper.calls = [];
+
+  return wrapper;
+}</code></pre>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="../../6.8%20Scheduling%20setTimeout%20and%20setInterval/6.8.2%20What%20will%20setTimeout%20show%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.9.2%20Delaying%20decorator/index.html" class="footer__link">Next Task</a>
+  </footer>
+</body>
+</html>

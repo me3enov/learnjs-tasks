@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.5 Counter object</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.5 Counter object</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Here a counter object is made with the help of the constructor function.<br><br>
+
+                Will it work? What will it show?
+            </p>
+            <pre class="code-container"><code class="code_task">function Counter() {
+  let count = 0;
+
+  this.up = function() {
+    return ++count;
+  };
+  this.down = function() {
+    return --count;
+  };
+}
+
+let counter = new Counter();
+
+alert( counter.up() ); // ?
+alert( counter.up() ); // ?
+alert( counter.down() ); // ?</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function Counter() {
+  let count = 0;
+
+  this.up = function() {
+    return ++count;
+  };
+  this.down = function() {
+    return --count;
+  };
+}
+
+let counter = new Counter();
+
+alert( counter.up() ); // => 1
+alert( counter.up() ); // => 2
+alert( counter.down() ); // => 1</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.4%20Are%20counters%20independent%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.6%20Function%20in%20if/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

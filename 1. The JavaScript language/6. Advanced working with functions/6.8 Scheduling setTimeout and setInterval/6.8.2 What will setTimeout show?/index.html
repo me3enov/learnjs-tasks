@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.8.2 What will setTimeout show?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.8.2 What will setTimeout show?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                In the code below there’s a setTimeout call scheduled,
+                then a heavy calculation is run, that takes more than 100ms to finish.<br><br>
+
+                When will the scheduled function run?<br><br>
+
+                After the loop.<br>
+                Before the loop.<br>
+                In the beginning of the loop.<br>
+                What is alert going to show?
+            </p>
+            <pre class="code-container"><code class="code_task">let i = 0;
+
+setTimeout(() => alert(i), 100); // ?
+
+// assume that the time to execute this function is >100ms
+for(let j = 0; j < 100000000; j++) {
+  i++;
+}</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+let i = 0;
+
+setTimeout(() => alert(i), 100); // => 100000000
+
+for(let j = 0; j < 100000000; j++) {
+  i++;
+}</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.8.1%20Output%20every%20second/index.html" class="footer__link">Previews Task</a>
+    <a href="../../6.9%20Decorators%20and%20forwarding,%20call,%20apply/6.9.1%20Spy%20decorator/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

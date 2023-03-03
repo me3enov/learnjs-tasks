@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.10.1 Bound function as a method</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">6.10.1 Bound function as a method</h1>
+    <p class="header__importance">importance: 5</p>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="task">
+        <h2 class="section__title">Tasks:</h2>
+        <p class="section__text">
+            What will be the output?
+        </p>
+        <pre class="code-container"><code class="code_task">function f() {
+  alert( this ); // ?
+}
+
+let user = {
+  g: f.bind(null)
+};
+
+user.g();</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="answer">
+        <h2 class="section__title">Answer:</h2>
+        <p class="section__text">Inside
+          <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+          <pre class="code-container"><code class="code">'use strict';
+
+function f() {
+  alert( this ); // => this => null
+}
+
+let user = {
+  g: f.bind(null) // null
+};
+
+user.g(); // => null</code></pre>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="../../6.9%20Decorators%20and%20forwarding,%20call,%20apply/6.9.4%20Throttle%20decorator/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.10.2%20Second%20bind/index.html" class="footer__link">Next Task</a>
+  </footer>
+</body>
+</html>

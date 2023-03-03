@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.11 Army of functions</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.11 Army of functions</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                The following code creates an array of shooters.<br><br>
+
+                Every function is meant to output its number. But something is wrong…
+            </p>
+            <pre class="code-container"><code class="code_task">function makeArmy() {
+  let shooters = [];
+
+  let i = 0;
+  while (i < 10) {
+    let shooter = function() { // create a shooter function,
+      alert( i ); // that should show its number
+    };
+    shooters.push(shooter); // and add it to the array
+    i++;
+  }
+
+  // ...and return the array of shooters
+  return shooters;
+}
+
+let army = makeArmy();
+
+// all shooters show 10 instead of their numbers 0, 1, 2, 3...
+army[0](); // 10 from the shooter number 0
+army[1](); // 10 from the shooter number 1
+army[2](); // 10 ...and so on.</code></pre>
+            <p class="section__text">
+                Why do all of the shooters show the same value?<br><br>
+
+                Fix the code so that they work as intended.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function makeArmy() {
+  const shooters = [];
+
+  for(let i = 0; i < 10; i++) {
+    const shooter = () => alert(i);
+    shooters.push(shooter);
+  }
+
+  return shooters;
+}
+
+let army = makeArmy();
+
+army[0](); // => 0
+army[5](); // => 5</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.10%20Sort%20by%20field/index.html" class="footer__link">Previews Task</a>
+    <a href="../../6.6%20Function%20object,%20NFE/6.6.1%20Set%20and%20decrease%20for%20counter/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.10.5 Partial application for login</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">6.10.5 Partial application for login</h1>
+    <p class="header__importance">importance: 5</p>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="task">
+        <h2 class="section__title">Tasks:</h2>
+        <p class="section__text">
+          The task is a little more complex variant of Fix a function that loses "this".<br><br>
+
+          The user object was modified. Now instead of two functions loginOk/loginFail,
+          it has a single function user.login(true/false).<br><br>
+
+          What should we pass askPassword in the code below, so that it calls user.login(true)
+          as ok and user.login(false) as fail?
+        </p>
+        <pre class="code-container"><code class="code_task">function askPassword(ok, fail) {
+  let password = prompt("Password?", '');
+  if (password == "rockstar") ok();
+  else fail();
+}
+
+let user = {
+  name: 'John',
+
+  login(result) {
+    alert( this.name + (result ? ' logged in' : ' failed to log in') );
+  }
+};
+
+askPassword(?, ?); // ?</code></pre>
+        <p class="section__text">
+          Your changes should only modify the highlighted fragment.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="answer">
+        <h2 class="section__title">Answer:</h2>
+        <p class="section__text">Inside
+          <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+          <pre class="code-container"><code class="code">'use strict';
+
+function f() {
+  alert( this ); // => this => null
+}
+
+let user = {
+  g: f.bind(null) // null
+};
+
+user.g(); // => null</code></pre>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="../6.10.4%20Fix%20a%20function%20that%20loses%20%22this%22/index.html" class="footer__link">Previews Task</a>
+  </footer>
+</body>
+</html>

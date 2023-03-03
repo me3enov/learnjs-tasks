@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6.9.2 Delaying decorator</title>
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">6.9.2 Delaying decorator</h1>
+    <p class="header__importance">importance: 5</p>
+  </header>
+  <main class="main">
+    <section class="section">
+      <div class="task">
+        <h2 class="section__title">Tasks:</h2>
+        <p class="section__text">
+            Create a decorator delay(f, ms) that delays each call of f by ms milliseconds.<br><br>
+
+            For instance:
+        </p>
+        <pre class="code-container"><code class="code_task">function f(x) {
+  alert(x);
+}
+
+// create wrappers
+let f1000 = delay(f, 1000);
+let f1500 = delay(f, 1500);
+
+f1000("test"); // shows "test" after 1000ms
+f1500("test"); // shows "test" after 1500ms</code></pre>
+        <p class="section__text">
+            In other words, delay(f, ms) returns a "delayed by ms" variant of f.<br><br>
+
+            In the code above, f is a function of a single argument,
+            but your solution should pass all arguments and the context this.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="answer">
+        <h2 class="section__title">Answer:</h2>
+        <p class="section__text">Inside
+          <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+          <pre class="code-container"><code class="code">'use strict';
+
+function delay(f, ms) {
+
+  return function() {
+    setTimeout(() => f.apply(this, arguments), ms);
+  };
+
+}
+
+let f1000 = delay(alert, 1000);
+
+f1000("test");</code></pre>
+        </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a href="../6.9.1%20Spy%20decorator/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.9.3%20Debounce%20decorator/index.html" class="footer__link">Next Task</a>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.10 Sort by field</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.10 Sort by field</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We’ve got an array of objects to sort:
+            </p>
+            <pre class="code-container"><code class="code_task">let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];</code></pre>
+            <p class="section__text">
+                The usual way to do that would be:
+            </p>
+            <pre class="code-container"><code class="code_task">// by name (Ann, John, Pete)
+users.sort((a, b) => a.name > b.name ? 1 : -1);
+
+// by age (Pete, Ann, John)
+users.sort((a, b) => a.age > b.age ? 1 : -1);</code></pre>
+            <p class="section__text">
+                Can we make it even less verbose, like this?
+            </p>
+            <pre class="code-container"><code class="code_task">users.sort(byField('name'));
+users.sort(byField('age'));</code></pre>
+            <p class="section__text">
+                So, instead of writing a function, just put byField(fieldName).<br><br>
+
+                Write the function byField that can be used for that.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];
+
+const byField = (field) => (a, b) => a[field] > b[field] ? 1 : -1;
+
+users.sort(byField('name'));
+users.forEach(user => alert(user.name)); // Ann, John, Pete
+
+users.sort(byField('age'));
+users.forEach(user => alert(user.name)); // Pete, Ann, John</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.9%20Filter%20through%20function/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.11%20Army%20of%20functions/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

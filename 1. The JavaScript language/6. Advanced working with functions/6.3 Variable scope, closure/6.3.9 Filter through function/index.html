@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.3.9 Filter through function</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">6.3.9 Filter through function</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We have a built-in method arr.filter(f) for arrays.
+                It filters all elements through the function f.
+                If it returns true, then that element is returned in the resulting array.<br><br>
+
+                Make a set of “ready to use” filters:<br><br>
+
+                inBetween(a, b) – between a and b or equal to them (inclusively).<br>
+                inArray([...]) – in the given array.<br>
+                The usage must be like this:<br><br>
+
+                arr.filter(inBetween(3,6)) – selects only values between 3 and 6.<br>
+                arr.filter(inArray([1,2,3])) – selects only elements matching with one of the members of [1,2,3].<br>
+                For instance:
+            </p>
+            <pre class="code-container"><code class="code_task">/* .. your code for inBetween and inArray */
+let arr = [1, 2, 3, 4, 5, 6, 7];
+
+alert( arr.filter(inBetween(3, 6)) ); // 3,4,5,6
+
+alert( arr.filter(inArray([1, 2, 10])) ); // 1,2</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+
+const inBetween = (a, b) => (x) => (x >= a) && (x <= b);
+
+const inArray = (arr) => (x) => arr.includes(x);
+
+alert( arr.filter(inArray([1, 2, 10])) ); // 1,2
+alert( arr.filter(inBetween(3, 6)) ); // 3,4,5,6</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../6.3.8%20Is%20variable%20visible%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../6.3.10%20Sort%20by%20field/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>
