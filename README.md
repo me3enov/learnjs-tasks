@@ -3,17 +3,17 @@
 ## [1. The JavaScript language](./1.%20The%20JavaScript%20language)
 
 > ### [2. JavaScript Fundamentals](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals)
-> >> #### [2.1 Hello, world!](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!)
-> >> >>> ##### [2.1.1 Show an alert](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.1%20Show%20an%20alert)
-> >> >>> ##### [2.1.2 Show an alert with an external script](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.2%20Show%20an%20alert%20with%20an%20external%20script)
+>> #### [2.1 Hello, world!](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!)
+>>> ##### [2.1.1 Show an alert](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.1%20Show%20an%20alert)
+>>> ##### [2.1.2 Show an alert with an external script](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.1%20Hello,%20world!/2.1.2%20Show%20an%20alert%20with%20an%20external%20script)
 
-> >> #### [2.4 Variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables)
-> >> >>> ##### [2.4.1 Working with variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.1%20Working%20with%20variables)
-> >> >>> ##### [2.4.2 Giving the right name](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.2%20Giving%20the%20right%20name)
-> >> >>> ##### [2.4.3 Uppercase const?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.3%20Uppercase%20const%3F)
+>> #### [2.4 Variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables)
+>>> ##### [2.4.1 Working with variables](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.1%20Working%20with%20variables)
+>>> ##### [2.4.2 Giving the right name](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.2%20Giving%20the%20right%20name)
+>>> ##### [2.4.3 Uppercase const?](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.4%20Variables/2.4.3%20Uppercase%20const%3F)
 
-> >> #### [2.5 Data types](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.5%20Data%20types)
-> >> >>> ##### [2.5.1 String quotes](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.5%20Data%20types/2.5.1%20String%20quotes)
+>> #### [2.5 Data types](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.5%20Data%20types)
+>>> ##### [2.5.1 String quotes](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.5%20Data%20types/2.5.1%20String%20quotes)
 
 >> #### [2.6 Interaction alert, prompt, confirm](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.6%20Interaction%20alert,%20prompt,%20confirm)
 >>> ##### [2.6.1 A simple page](./1.%20The%20JavaScript%20language/2.%20JavaScript%20Fundamentals/2.6%20Interaction%20alert,%20prompt,%20confirm/2.6.1%20A%20simple%20page)
