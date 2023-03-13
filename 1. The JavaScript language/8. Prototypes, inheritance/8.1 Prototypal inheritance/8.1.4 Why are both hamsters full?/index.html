@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.1.4 Why are both hamsters full?</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">8.1.4 Why are both hamsters full?</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                We have two hamsters: speedy and lazy inheriting from the general hamster object.<br><br>
+
+                When we feed one of them, the other one is also full. Why? How can we fix it?
+            </p>
+            <pre class="code-container"><code class="code_task">let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  }
+};
+
+let speedy = {
+  __proto__: hamster
+};
+
+let lazy = {
+  __proto__: hamster
+};
+
+// This one found the food
+speedy.eat("apple");
+alert( speedy.stomach ); // apple
+
+// This one also has it, why? fix please.
+alert( lazy.stomach ); // apple</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const hamster = {
+  eat(food) {
+    this.stomach.push(food);
+  }
+};
+
+const speedy = {
+  __proto__: hamster,
+  stomach: []
+};
+
+const lazy = {
+  __proto__: hamster,
+  stomach: []
+};
+
+// Speedy one found the food
+speedy.eat("apple");
+alert( speedy.stomach ); // => apple
+
+// Lazy one's stomach is empty
+alert( lazy.stomach ); // => nothing</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../8.1.3%20Where%20does%20it%20write%3F/index.html" class="footer__link">Previews Task</a>
+    <a href="../../8.2%20F.prototype/8.2.1%20Changing%20%22prototype%22/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

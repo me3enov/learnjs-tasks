@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3.1.1 Fetch users from GitHub</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">3.1.1 Fetch users from GitHub</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Fetch users from GitHub
+                Create an async function getUsers(names), that gets an array of GitHub logins,
+                fetches the users from GitHub and returns an array of GitHub users.<br><br>
+
+                The GitHub url with user information for the given USERNAME is:
+                https://api.github.com/users/USERNAME.<br><br>
+
+                There’s a test example in the sandbox.<br><br>
+
+                Important details:<br><br>
+
+                1. There should be one fetch request per user.
+                2. Requests shouldn’t wait for each other. So that the data arrives as soon as possible.
+                3. If any request fails, or if there’s no such user,
+                the function should return null in the resulting array.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+async function getUsers(names) {
+  const jobs = [];
+
+  for(let name of names) {
+    const job = fetch(`https://api.github.com/users/${name}`).then(
+        successResponse => {
+          return successResponse.status != 200 ? null : successResponse.json();
+        },
+        failResponse => {
+          return null;
+        }
+    );
+    jobs.push(job);
+  }
+
+  const results = await Promise.all(jobs);
+
+  return results;
+}</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../3.5.%20Fetch%20Cross-Origin%20Requests/3.5.1%20Why%20do%20we%20need%20Origin%3F/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

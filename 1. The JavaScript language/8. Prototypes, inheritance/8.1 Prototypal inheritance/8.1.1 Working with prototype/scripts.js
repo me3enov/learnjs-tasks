@@ -1,0 +1,19 @@
+'use strict';
+
+const animal = {
+  jumps: null
+};
+const rabbit = {
+  __proto__: animal,
+  jumps: true
+};
+
+alert( rabbit.jumps ); // => true (1)
+
+delete rabbit.jumps;
+
+alert( rabbit.jumps ); // => null (2)
+
+delete animal.jumps;
+
+alert( rabbit.jumps ); // => undefined (3)

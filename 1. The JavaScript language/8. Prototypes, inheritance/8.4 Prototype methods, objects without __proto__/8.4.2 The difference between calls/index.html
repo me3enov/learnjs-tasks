@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.4.2 The difference between calls</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">8.4.2 The difference between calls</h1>
+    <p class="header__importance">importance: 4</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Let’s create a new rabbit object:
+            </p>
+            <pre class="code-container"><code class="code_task">function Rabbit(name) {
+  this.name = name;
+}
+Rabbit.prototype.sayHi = function() {
+  alert(this.name);
+};
+
+let rabbit = new Rabbit("Rabbit");</code></pre>
+            <p class="section__text">
+                These calls do the same thing or not?
+            </p>
+            <pre class="code-container"><code class="code_task">rabbit.sayHi();
+Rabbit.prototype.sayHi();
+Object.getPrototypeOf(rabbit).sayHi();
+rabbit.__proto__.sayHi();</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function Rabbit(name) {
+  this.name = name;
+}
+Rabbit.prototype.sayHi = function() {
+  alert( this.name );
+}
+
+const rabbit = new Rabbit('Rabbit');
+
+rabbit.sayHi();                        // => Rabbit
+Rabbit.prototype.sayHi();              // => undefined
+Object.getPrototypeOf(rabbit).sayHi(); // => undefined
+rabbit.__proto__.sayHi();              // => undefined</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../8.4.1%20Add%20toString%20to%20the%20dictionary/index.html" class="footer__link">Previews Task</a>
+</footer>
+</body>
+</html>

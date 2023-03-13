@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.1.1 Working with prototype</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">8.1.1 Working with prototype</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Here’s the code that creates a pair of objects, then modifies them.<br><br>
+
+                Which values are shown in the process?
+            </p>
+            <pre class="code-container"><code class="code_task">let animal = {
+  jumps: null
+};
+let rabbit = {
+  __proto__: animal,
+  jumps: true
+};
+
+alert( rabbit.jumps ); // ? (1)
+
+delete rabbit.jumps;
+
+alert( rabbit.jumps ); // ? (2)
+
+delete animal.jumps;
+
+alert( rabbit.jumps ); // ? (3)</code></pre>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+const animal = {
+  jumps: null
+};
+const rabbit = {
+  __proto__: animal,
+  jumps: true
+};
+
+alert( rabbit.jumps ); // => true (1)
+
+delete rabbit.jumps;
+
+alert( rabbit.jumps ); // => null (2)
+
+delete animal.jumps;
+
+alert( rabbit.jumps ); // => undefined (3)</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../../../6.%20Advanced%20working%20with%20functions/6.10%20Function%20binding/6.10.5%20Partial%20application%20for%20login/index.html" class="footer__link">Previews Task</a>
+    <a href="../8.1.2%20Searching%20algorithm/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

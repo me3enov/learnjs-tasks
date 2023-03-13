@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.2.2 Create an object with the same constructor</title>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body">
+<header class="header">
+    <h1 class="header__title">8.2.2 Create an object with the same constructor</h1>
+    <p class="header__importance">importance: 5</p>
+</header>
+<main class="main">
+    <section class="section">
+        <div class="task">
+            <h2 class="section__title">Tasks:</h2>
+            <p class="section__text">
+                Imagine, we have an arbitrary object obj, created by a constructor function
+                – we don’t know which one, but we’d like to create a new object using it.<br><br>
+
+                Can we do it like that?
+            </p>
+            <pre class="code-container"><code class="code_task">let obj2 = new obj.constructor();</code></pre>
+            <p class="section__text">
+                Give an example of a constructor function for obj which lets such code work right.
+                And an example that makes it work wrong.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="answer">
+            <h2 class="section__title">Answer:</h2>
+            <p class="section__text">Inside
+                <a href="scripts.js" target="_blank" class="section__link">scripts.js</a> :
+            <pre class="code-container"><code class="code">'use strict';
+
+function User(name) {
+  this.name = name;
+}
+
+const user = new User('John');
+const user2 = new user.constructor('Pete');
+
+alert( user2.name ); // => Pete
+
+function User2(name) {
+  this.name = name;
+}
+User2.prototype = null;
+
+let user3 = new User2('John');
+let user4 = new user3.constructor('Pete');
+
+alert( user4.name ); // => undefined</code></pre>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <a href="../8.2.1%20Changing%20%22prototype%22/index.html" class="footer__link">Previews Task</a>
+    <a href="../../8.3%20Native%20prototypes/8.3.1%20Add%20method%20%22f.defer(ms)%22%20to%20functions/index.html" class="footer__link">Next Task</a>
+</footer>
+</body>
+</html>

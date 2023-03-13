@@ -203,3 +203,18 @@
 >>>> ##### [6.10.3 Function property after bind](./1.%20The%20JavaScript%20language/6.%20Advanced%20working%20with%20functions/6.10%20Function%20binding/6.10.3%20Function%20property%20after%20bind)
 >>>> ##### [6.10.4 Fix a function that loses "this"](./1.%20The%20JavaScript%20language/6.%20Advanced%20working%20with%20functions/6.10%20Function%20binding/6.10.4%20Fix%20a%20function%20that%20loses%20%22this%22)
 >>>> ##### [6.10.5 Partial application for login](./1.%20The%20JavaScript%20language/6.%20Advanced%20working%20with%20functions/6.10%20Function%20binding/6.10.5%20Partial%20application%20for%20login)
+
+>> ### [8. Prototypes, inheritance](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance)
+>>> #### [8.1 Prototypal inheritance](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance)
+>>>> #### [8.1.1 Working with prototype](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.1%20Working%20with%20prototype)
+>>>> #### [8.1.2 Searching algorithm](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.2%20Searching%20algorithm)
+>>>> #### [8.1.3 Where does it write?](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.3%20Where%20does%20it%20write%3F)
+>>>> #### [8.1.4 Why are both hamsters full?](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.4%20Why%20are%20both%20hamsters%20full%3F)
+
+> ## [3. Additional articles](./3.%20Additional%20articles)
+>> ### [3. Network requests](./3.%20Additional%20articles/3.%20Network%20requests)
+>>> ### [3.1. Fetch](./3.%20Additional%20articles/3.%20Network%20requests/3.1.%20Fetch)
+
+>>>> ### [3.1.1 Fetch users from GitHub](./3.%20Additional%20articles/3.%20Network%20requests/3.1.%20Fetch/3.1.1%20Fetch%20users%20from%20GitHub)
+> >>> ### [3.5. Fetch Cross-Origin Requests](./3.%20Additional%20articles/3.%20Network%20requests/3.5.%20Fetch%20Cross-Origin%20Requests)
+>>>> ### [3.5.1 Why do we need Origin?](./3.%20Additional%20articles/3.%20Network%20requests/3.5.%20Fetch%20Cross-Origin%20Requests/3.5.1%20Why%20do%20we%20need%20Origin%3F)
