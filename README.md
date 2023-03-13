@@ -211,7 +211,7 @@
 >>> #### [8.1.3 Where does it write?](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.3%20Where%20does%20it%20write%3F)
 >>> #### [8.1.4 Why are both hamsters full?](./1.%20The%20JavaScript%20language/8.%20Prototypes,%20inheritance/8.1%20Prototypal%20inheritance/8.1.4%20Why%20are%20both%20hamsters%20full%3F)
 
- ## [3. Additional articles](./3.%20Additional%20articles)
+## [3. Additional articles](./3.%20Additional%20articles)
 > ### [3. Network requests](./3.%20Additional%20articles/3.%20Network%20requests)
 >> ### [3.1. Fetch](./3.%20Additional%20articles/3.%20Network%20requests/3.1.%20Fetch)
 >>> ### [3.1.1 Fetch users from GitHub](./3.%20Additional%20articles/3.%20Network%20requests/3.1.%20Fetch/3.1.1%20Fetch%20users%20from%20GitHub)
